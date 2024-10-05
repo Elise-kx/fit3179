@@ -18,14 +18,14 @@
               "url": "data/visitors_2024_states.csv"
             },
             "key": "State",
-            "fields": ["Number of Visitors"]
+            "fields": ["Percantage Over Total %"]
           }
         }
       ],
       "mark": { "type": "geoshape" },
       "encoding": {
         "color": {
-          "field": "Number of Visitors",
+          "field": "Percantage Over Total %",
           "type": "quantitative",
           "scale": { "type": "log" }
         },
@@ -35,7 +35,7 @@
             "type": "nominal",
             "title": "State"
           },
-          { "field": "Number of Visitors", "type": "quantitative" }
+          { "field": "Percantage Over Total %", "type": "quantitative" }
         ]
       }
     },

@@ -1,9 +1,9 @@
-State,Number of Visitors,Year
-New South Wales,234450,2024
-Victoria,161390,2024
-Queensland,171360,2024
-South Australia,15820,2024
-Western Australia,56420,2024
-Tasmania,3900,2024
-Northern Territory,6740,2024
-Australian Capital Territory,8810,2024
+State,Number of Visitors,Percantage Over Total %,Year
+New South Wales,234450,35.58,2024
+Victoria,161390,24.49,2024
+Queensland,171360,26.01,2024
+South Australia,15820,17.25,2024
+Western Australia,56420,61.53,2024
+Tasmania,3900,4.25,2024
+Northern Territory,6740,43.34,2024
+Australian Capital Territory,8810,56.66,2024
