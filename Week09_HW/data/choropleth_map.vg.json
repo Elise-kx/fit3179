@@ -7,7 +7,7 @@
   "layer": [
     {
       "data": {
-        "url": "data/output.json",
+        "url": "output.json",
         "format": { "type": "topojson", "feature": "states" }
       },
       "transform": [
@@ -15,17 +15,17 @@
           "lookup": "properties.STATE_NAME",
           "from": {
             "data": {
-              "url": "data/visitors_2024_states.csv"
+              "url": "visitors_2024_states.csv"
             },
             "key": "State",
-            "fields": ["Percantage Over Total %"]
+            "fields": ["Percentage Over Total %"]
           }
         }
       ],
       "mark": { "type": "geoshape" },
       "encoding": {
         "color": {
-          "field": "Percantage Over Total %",
+          "field": "Percentage Over Total %",
           "type": "quantitative",
           "scale": { "type": "log" }
         },
@@ -35,13 +35,13 @@
             "type": "nominal",
             "title": "State"
           },
-          { "field": "Percantage Over Total %", "type": "quantitative" }
+          { "field": "Percentage Over Total %", "type": "quantitative" }
         ]
       }
     },
     {
       "data": {
-        "url": "data/output.json",
+        "url": "output.json",
         "format": { "type": "topojson", "feature": "ne_110m_graticules_30" }
       },
       "mark": {
@@ -54,7 +54,7 @@
           "lookup": "properties.STATE_NAME",
           "from": {
             "data": {
-              "url": "data/visitors_2024_states.csv"
+              "url": "visitors_2024_states.csv"
             },
             "key": "State",
             "fields": ["Number of Visitors"]
