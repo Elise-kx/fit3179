@@ -6,6 +6,9 @@
     "fontSize": 24,
     "fontStyle": "Italic"
   },
+  "data": {
+    "url": "https://raw.githubusercontent.com/Elise-kx/fit3179/refs/heads/main/Week10_HW/data/number_arrivals.csv"
+  },
   "vconcat": [
     {
       "title": "Number of Short-term Visitors Arrivals in Jul 2024",
@@ -14,24 +17,25 @@
       "projection": { "type": "equirectangular" },
       "layer": [
         {
-          "data": {
-            "url": "https://raw.githubusercontent.com/Elise-kx/fit3179/refs/heads/main/Week10_HW/data/output.json",
-            "format": { "type": "topojson", "feature": "states" }
-          },
-          "mark": { "type": "geoshape" },
           "transform": [
             {
-              "lookup": "properties.STATE_NAME",
+              "lookup": "State",
               "from": {
                 "data": {
-                  "url": "number_arrivals.csv"
+                  "url": "https://raw.githubusercontent.com/Elise-kx/fit3179/refs/heads/main/Week10_HW/data/output.json",
+                  "format": { "type": "topojson", "feature": "states" }
                 },
-                "key": "State",
-                "fields": ["Year", "Number of Arrivals"]
-              }
+                "key": "properties.STATE_NAME"
+              },
+              "as" : "geo"
+            },
+            {
+              "filter": { "param": "time_brush" }
             }
           ],
+          "mark" : {"type" : "geoshape"},
           "encoding": {
+            "shape": {"field": "geo", "type": "geojson"},
             "color": {
               "field": "Number of Arrivals",
               "type": "quantitative",
@@ -51,8 +55,7 @@
               {
                 "field": "Number of Arrivals",
                 "type": "quantitative"
-              },
-              { "field": "Number of Arrivals", "type": "quantitative" }
+              }
             ]
           }
         },
@@ -72,22 +75,27 @@
     {
       "width": 600,
       "height": 300,
-      "data": { "url": "number_arrivals.csv" },
       "mark": "point",
+      "title": "Use this line chart to filter out the data based on time",
+      "params": [
+        {
+          "name": "time_brush",
+          "select": { "type": "interval", "encodings": ["x"] }
+        }
+      ],
       "encoding": {
-        "x": { "field": "Year", "timeUnit": "year", "title": "Year" },
+        "x": { "field": "Year", "title": "Year", "timeUnit": "year" },
         "y": {
-          "aggregate": "sum",
           "field": "Number of Arrivals",
           "type": "quantitative",
           "title": "Total Number of Arrivals"
         },
         "color": { "field": "State", "type": "nominal" },
-        "tooltip" : [
-          {"field": "State", "type": "nominal"},
-
-          {"field": "Year", "type": "temporal", "timeUnit" : "year" },
-          { "field": "Number of Arrivals", "type": "quantitative", "aggregate": "sum", "title": "Total Number of Arrivals" }        ]
+        "tooltip": [
+          { "field": "State", "type": "nominal" },
+          { "field": "Year", "type": "temporal", "timeUnit": "year" },
+          { "field": "Number of Arrivals", "type": "quantitative" }
+        ]
       }
     }
   ],
