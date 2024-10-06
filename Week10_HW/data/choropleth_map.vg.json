@@ -85,6 +85,7 @@
         "color": { "field": "State", "type": "nominal" },
         "tooltip" : [
           {"field": "State", "type": "nominal"},
+
           {"field": "Year", "type": "temporal", "timeUnit" : "year" },
           { "field": "Number of Arrivals", "type": "quantitative", "aggregate": "sum", "title": "Total Number of Arrivals" }        ]
       }
