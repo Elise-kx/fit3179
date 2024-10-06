@@ -1,0 +1,87 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Tourism analysis of Australia in 2024",
+    "anchor": "middle",
+    "fontSize": 24,
+    "fontStyle": "Italic"
+  },
+  "vconcat": [
+    {
+      "title": "Number of Short-term Visitors Arrivals in Jul 2024",
+      "width": 800,
+      "height": 400,
+      "projection": { "type": "equirectangular" },
+      "layer": [
+        {
+          "data": {
+            "url": "output.json",
+            "format": { "type": "topojson", "feature": "states" }
+          },
+          "mark": { "type": "geoshape" },
+          "transform": [
+            {
+              "lookup": "properties.STATE_NAME",
+              "from": {
+                "data": {
+                  "url": "short-term_arrivals.csv"
+                },
+                "key": "State",
+                "fields": [
+                  "Year",
+                  "Number of Short-term Visitors Arrivals",
+                  "Percentage Over Total %"
+                ]
+              }
+            }
+          ],
+          "encoding": {
+            "color": {
+              "field": "Percentage Over Total %",
+              "type": "quantitative",
+              "scale": { "type": "log" }
+            },
+            "tooltip": [
+              {
+                "field": "Year",
+                "type": "temporal",
+                "timeUnit": "year",
+                "title": "Year"
+              },
+              {
+                "field": "properties.STATE_NAME",
+                "type": "nominal",
+                "title": "State"
+              },
+              {
+                "field": "Number of Short-term Visitors Arrivals",
+                "type": "quantitative"
+              },
+              { "field": "Percentage Over Total %", "type": "quantitative" }
+            ]
+          }
+        },
+        {
+          "data": {
+            "url": "output.json",
+            "format": { "type": "topojson", "feature": "ne_110m_graticules_30" }
+          },
+          "mark": {
+            "type": "geoshape",
+            "stroke": "black",
+            "strokeWidth": 1
+          }
+        }
+      ]
+    },
+    {
+      "data": { "url": "total_each_year.csv" },
+      "mark": "line",
+      "encoding": {
+        "x": { "field": "Year", "type": "temporal" },
+        "y": { "field": "Total of year", "type": "quantitative" }
+      }
+    }
+  ],
+  "config": { "title": { "font": "times new roman" } }
+}
