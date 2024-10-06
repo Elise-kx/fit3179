@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
-    "text": "Tourism analysis of Australia in 2024",
+    "text": "Tourism analysis of Australia",
     "anchor": "middle",
     "fontSize": 24,
     "fontStyle": "Italic"
@@ -15,7 +15,7 @@
       "layer": [
         {
           "data": {
-            "url": "data/output.json",
+            "url": "https://raw.githubusercontent.com/Elise-kx/fit3179/refs/heads/main/Week10_HW/data/output.json",
             "format": { "type": "topojson", "feature": "states" }
           },
           "mark": { "type": "geoshape" },
@@ -24,20 +24,16 @@
               "lookup": "properties.STATE_NAME",
               "from": {
                 "data": {
-                  "url": "short-term_arrivals.csv"
+                  "url": "number_arrivals.csv"
                 },
                 "key": "State",
-                "fields": [
-                  "Year",
-                  "Number of Short-term Visitors Arrivals",
-                  "Percentage Over Total %"
-                ]
+                "fields": ["Year", "Number of Arrivals"]
               }
             }
           ],
           "encoding": {
             "color": {
-              "field": "Percentage Over Total %",
+              "field": "Number of Arrivals",
               "type": "quantitative",
               "scale": { "type": "log" }
             },
@@ -53,16 +49,16 @@
                 "title": "State"
               },
               {
-                "field": "Number of Short-term Visitors Arrivals",
+                "field": "Number of Arrivals",
                 "type": "quantitative"
               },
-              { "field": "Percentage Over Total %", "type": "quantitative" }
+              { "field": "Number of Arrivals", "type": "quantitative" }
             ]
           }
         },
         {
           "data": {
-            "url": "data/output.json",
+            "url": "https://raw.githubusercontent.com/Elise-kx/fit3179/refs/heads/main/Week10_HW/data/output.json",
             "format": { "type": "topojson", "feature": "ne_110m_graticules_30" }
           },
           "mark": {
@@ -74,11 +70,23 @@
       ]
     },
     {
-      "data": { "url": "https://github.com/Elise-kx/fit3179/blob/main/Week10_HW/data/short-term_arrivals.csv" },
-      "mark": "line",
+      "width": 600,
+      "height": 300,
+      "data": { "url": "number_arrivals.csv" },
+      "mark": "point",
       "encoding": {
-        "x": { "field": "Year", "type": "temporal" },
-        "y": { "field": "Total of year", "type": "quantitative" }
+        "x": { "field": "Year", "timeUnit": "year", "title": "Year" },
+        "y": {
+          "aggregate": "sum",
+          "field": "Number of Arrivals",
+          "type": "quantitative",
+          "title": "Total Number of Arrivals"
+        },
+        "color": { "field": "State", "type": "nominal" },
+        "tooltip" : [
+          {"field": "State", "type": "nominal"},
+          {"field": "Year", "type": "temporal", "timeUnit" : "year" },
+          { "field": "Number of Arrivals", "type": "quantitative", "aggregate": "sum", "title": "Total Number of Arrivals" }        ]
       }
     }
   ],

@@ -1,9 +1,27 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "data": {"url": "total_each_year.csv"},
-  "mark": "line",
+  "width": 600,
+  "height": 300,
+  "data": { "url": "number_arrivals.csv" },
+  "mark": "point",
+  "transform": [
+    {
+      "aggregate": [{
+        "op": "sum",
+        "field": "Number of Arrivals",
+        "as": "Total Arrivals"  
+      }],
+      "groupby": ["Year", "State"]  
+    }
+  ],
   "encoding": {
-    "x": {"field": "Year", "type": "temporal"},
-    "y": {"field": "Total of year", "type": "quantitative"}
+    "x": { "field": "Year", "timeUnit": "year", "title": "Year" },
+    "y": { "field": "Total Arrivals", "type": "quantitative", "title": "Total Number of Arrivals" },
+    "color": { "field": "State", "type": "nominal" },
+    "tooltip": [
+      { "field": "Year", "type": "temporal", "timeUnit": "year" },
+      { "field": "State", "type": "nominal" },
+      { "field": "Total Arrivals", "type": "quantitative", "title": "Total Number of Arrivals" }
+    ]
   }
 }
