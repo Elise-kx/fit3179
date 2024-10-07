@@ -10,6 +10,19 @@ body {
   margin-top: 100px;
 }
 
+h2 {
+  margin-left: 2%;
+  margin-right: 2%;
+  text-align: justify;
+  font-size: 30px;
+}
+
+h3 {
+  margin-left: 2%;
+  margin-right: 2%;
+  text-align: justify;
+}
+
 img {
   width: 150px;
   text-align: left;
@@ -17,9 +30,21 @@ img {
   margin-top: auto;
 }
 
-.flex-container {
+.flex-container1 {
   display: flex;
   flex-direction: row;
   font-size: 30px;
   text-align: center;
+}
+
+.flex-container2 {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+}
+
+.description {
+  word-wrap: break-word;
+  width: 80%;
+  padding: 70px 0;
 }

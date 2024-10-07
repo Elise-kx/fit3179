@@ -5,7 +5,7 @@
   },
   "vconcat": [
     {
-      "title": "Number of Short-term Visitors Arrivals In Different States",
+      "title": {"text" : "Number of Short-term Visitors Arrivals In Different States", "fontSize": 22},
       "width": 800,
       "height": 400,
       "projection": { "type": "equirectangular" },
@@ -42,9 +42,8 @@
                 "title": "Year"
               },
               {
-                "field": "properties.STATE_NAME",
-                "type": "nominal",
-                "title": "State"
+                "field": "State",
+                "type": "nominal"
               },
               {
                 "field": "Number of Arrivals",
@@ -70,7 +69,7 @@
       "width": 800,
       "height": 200,
       "mark": "point",
-      "title": "Use this line chart to filter out the data based on Year",
+      "title": {"text" : "Use this line chart to filter out the data based on Year", "fontSize": 18},
       "params": [
         {
           "name": "time_brush",
@@ -96,7 +95,6 @@
   "config": {
     "title": { 
       "font": "sans-serif",
-      "fontSize": 22,
       "color": "#593403"
     },
     "background": "#ffeedb",
