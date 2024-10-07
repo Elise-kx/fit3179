@@ -1,17 +1,11 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": {
-    "text": "Tourism analysis of Australia",
-    "anchor": "middle",
-    "fontSize": 24,
-    "fontStyle": "Italic"
-  },
   "data": {
-    "url": "https://raw.githubusercontent.com/Elise-kx/fit3179/refs/heads/main/Week10_HW/data/number_arrivals.csv"
+    "url": "https://raw.githubusercontent.com/Elise-kx/fit3179/refs/heads/main/A2/data/number_arrivals.csv"
   },
   "vconcat": [
     {
-      "title": "Number of Short-term Visitors Arrivals in Jul 2024",
+      "title": "Number of Short-term Visitors Arrivals In Different States",
       "width": 800,
       "height": 400,
       "projection": { "type": "equirectangular" },
@@ -22,20 +16,20 @@
               "lookup": "State",
               "from": {
                 "data": {
-                  "url": "https://raw.githubusercontent.com/Elise-kx/fit3179/refs/heads/main/Week10_HW/data/output.json",
+                  "url": "https://raw.githubusercontent.com/Elise-kx/fit3179/refs/heads/main/A2/data/output.json",
                   "format": { "type": "topojson", "feature": "states" }
                 },
                 "key": "properties.STATE_NAME"
               },
-              "as" : "geo"
+              "as": "geo"
             },
             {
               "filter": { "param": "time_brush" }
             }
           ],
-          "mark" : {"type" : "geoshape"},
+          "mark": { "type": "geoshape" },
           "encoding": {
-            "shape": {"field": "geo", "type": "geojson"},
+            "shape": { "field": "geo", "type": "geojson" },
             "color": {
               "field": "Number of Arrivals",
               "type": "quantitative",
@@ -61,7 +55,7 @@
         },
         {
           "data": {
-            "url": "https://raw.githubusercontent.com/Elise-kx/fit3179/refs/heads/main/Week10_HW/data/output.json",
+            "url": "https://raw.githubusercontent.com/Elise-kx/fit3179/refs/heads/main/A2/data/output.json",
             "format": { "type": "topojson", "feature": "ne_110m_graticules_30" }
           },
           "mark": {
@@ -73,10 +67,10 @@
       ]
     },
     {
-      "width": 600,
-      "height": 300,
+      "width": 800,
+      "height": 200,
       "mark": "point",
-      "title": "Use this line chart to filter out the data based on time",
+      "title": "Use this line chart to filter out the data based on Year",
       "params": [
         {
           "name": "time_brush",
@@ -99,5 +93,22 @@
       }
     }
   ],
-  "config": { "title": { "font": "times new roman" } }
+  "config": {
+    "title": { 
+      "font": "sans-serif",
+      "fontSize": 22,
+      "color": "#593403"
+    },
+    "background": "#ffeedb",
+    "axis": {
+      "titleColor": "#593403",
+      "labelColor": "#593403",
+      "labelFont": "sans-serif",
+      "labelFontSize": 15,
+      "titleFontSize": 15
+    },
+    "legend": {
+      "titleColor": "#593403"
+    }
+  }
 }

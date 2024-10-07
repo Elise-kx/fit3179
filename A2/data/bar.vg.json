@@ -1,0 +1,48 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "https://raw.githubusercontent.com/Elise-kx/fit3179/refs/heads/main/A2/data/number_arrivals.csv"
+  },
+  "hconcat": [
+    {
+      "title": "Number of Short-term Visitors Arrivals in Jul 2024",
+      "width": 800,
+      "height": 400,
+      "mark": "bar"
+    },
+    {
+      "width": 600,
+      "height": 300,
+      "mark": "point",
+      "title": "Use this line chart to filter out the data based on time",
+      "encoding": {
+        "x": { "field": "Year", "title": "Year", "timeUnit": "year" },
+        "y": {
+          "field": "Number of Arrivals",
+          "type": "quantitative",
+          "title": "Total Number of Arrivals"
+        },
+        "color": { "field": "State", "type": "nominal" },
+        "tooltip": [
+          { "field": "State", "type": "nominal" },
+          { "field": "Year", "type": "temporal", "timeUnit": "year" },
+          { "field": "Number of Arrivals", "type": "quantitative" }
+        ]
+      }
+    }
+  ],
+  "config": { 
+    "title": { 
+      "font": "times new roman",
+      "fontSize": 22
+    },
+    "background": "#ffeedb",
+    "axis": {
+      "titleColor": "#593403",
+      "labelColor": "#593403",
+      "labelFont": "sans-serif",
+      "labelFontSize": 15,
+      "titleFontSize": 15
+    }
+  }
+}
