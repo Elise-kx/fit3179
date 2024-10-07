@@ -1,0 +1,103 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Tourism analysis of Australia",
+    "anchor": "middle",
+    "fontSize": 24,
+    "fontStyle": "Italic"
+  },
+  "data": {
+    "url": "https://raw.githubusercontent.com/Elise-kx/fit3179/refs/heads/main/Week10_HW/data/number_arrivals.csv"
+  },
+  "vconcat": [
+    {
+      "title": "Number of Short-term Visitors Arrivals in Jul 2024",
+      "width": 800,
+      "height": 400,
+      "projection": { "type": "equirectangular" },
+      "layer": [
+        {
+          "transform": [
+            {
+              "lookup": "State",
+              "from": {
+                "data": {
+                  "url": "https://raw.githubusercontent.com/Elise-kx/fit3179/refs/heads/main/Week10_HW/data/output.json",
+                  "format": { "type": "topojson", "feature": "states" }
+                },
+                "key": "properties.STATE_NAME"
+              },
+              "as" : "geo"
+            },
+            {
+              "filter": { "param": "time_brush" }
+            }
+          ],
+          "mark" : {"type" : "geoshape"},
+          "encoding": {
+            "shape": {"field": "geo", "type": "geojson"},
+            "color": {
+              "field": "Number of Arrivals",
+              "type": "quantitative",
+              "scale": { "type": "log" }
+            },
+            "tooltip": [
+              {
+                "field": "Year",
+                "timeUnit": "year",
+                "title": "Year"
+              },
+              {
+                "field": "properties.STATE_NAME",
+                "type": "nominal",
+                "title": "State"
+              },
+              {
+                "field": "Number of Arrivals",
+                "type": "quantitative"
+              }
+            ]
+          }
+        },
+        {
+          "data": {
+            "url": "https://raw.githubusercontent.com/Elise-kx/fit3179/refs/heads/main/Week10_HW/data/output.json",
+            "format": { "type": "topojson", "feature": "ne_110m_graticules_30" }
+          },
+          "mark": {
+            "type": "geoshape",
+            "stroke": "black",
+            "strokeWidth": 1
+          }
+        }
+      ]
+    },
+    {
+      "width": 600,
+      "height": 300,
+      "mark": "point",
+      "title": "Use this line chart to filter out the data based on time",
+      "params": [
+        {
+          "name": "time_brush",
+          "select": { "type": "interval", "encodings": ["x"] }
+        }
+      ],
+      "encoding": {
+        "x": { "field": "Year", "title": "Year", "timeUnit": "year" },
+        "y": {
+          "field": "Number of Arrivals",
+          "type": "quantitative",
+          "title": "Total Number of Arrivals"
+        },
+        "color": { "field": "State", "type": "nominal" },
+        "tooltip": [
+          { "field": "State", "type": "nominal" },
+          { "field": "Year", "type": "temporal", "timeUnit": "year" },
+          { "field": "Number of Arrivals", "type": "quantitative" }
+        ]
+      }
+    }
+  ],
+  "config": { "title": { "font": "times new roman" } }
+}
