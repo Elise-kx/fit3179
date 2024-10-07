@@ -1,9 +1,11 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Number of arrivals from different Countries - TOP 5",
   "data": {
     "url": "data/number_arrivals_countries.csv"
   },
   "height": { "step": 50 },
+  "width": 400,
   "params": [
     {
       "name": "year_selection",
@@ -35,12 +37,13 @@
   "encoding": {
     "x": {
       "field": "Number of arrivals",
-      "type": "quantitative",
-      "sort": { "field": "Number of arrival", "order": "descending" }
+      "type": "quantitative"
     },
     "y": {
       "field": "Countries",
-      "type": "nominal"
+      "type": "nominal",
+      "sort": { "field": "Number of arrivals", "order": "ascending" }
+
     },
     "tooltip": [
       { "field": "Countries", "type": "nominal" },
@@ -50,8 +53,9 @@
   },
   "config": {
     "title": {
-      "font": "times new roman",
-      "fontSize": 22
+      "font": "sans-serif",
+      "fontSize": 22,
+      "color": "#593403"
     },
     "background": "#ffeedb",
     "axis": {
@@ -60,6 +64,9 @@
       "labelFont": "sans-serif",
       "labelFontSize": 15,
       "titleFontSize": 15
+    },
+    "legend": {
+      "titleColor": "#593403"
     }
   }
 }
