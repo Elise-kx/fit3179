@@ -1,38 +1,55 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "data": {
-    "url": "https://raw.githubusercontent.com/Elise-kx/fit3179/refs/heads/main/A2/data/number_arrivals.csv"
+    "url": "data/number_arrivals_countries.csv"
   },
-  "hconcat": [
+  "height": { "step": 50 },
+  "params": [
     {
-      "title": "Number of Short-term Visitors Arrivals in Jul 2024",
-      "width": 800,
-      "height": 400,
-      "mark": "bar"
-    },
-    {
-      "width": 600,
-      "height": 300,
-      "mark": "point",
-      "title": "Use this line chart to filter out the data based on time",
-      "encoding": {
-        "x": { "field": "Year", "title": "Year", "timeUnit": "year" },
-        "y": {
-          "field": "Number of Arrivals",
-          "type": "quantitative",
-          "title": "Total Number of Arrivals"
-        },
-        "color": { "field": "State", "type": "nominal" },
-        "tooltip": [
-          { "field": "State", "type": "nominal" },
-          { "field": "Year", "type": "temporal", "timeUnit": "year" },
-          { "field": "Number of Arrivals", "type": "quantitative" }
-        ]
+      "name": "year_selection",
+      "value": 2024,
+      "bind": {
+        "input": "range",
+        "min": 1992,
+        "max": 2024,
+        "step": 1,
+        "name": "Year: "
       }
     }
   ],
-  "config": { 
-    "title": { 
+  "transform": [
+    {
+      "window": [{ "op": "rank", "as": "rank" }],
+      "sort": [{ "field": "Number of arrivals", "order": "descending" }]
+    },
+    {
+      "filter": {
+        "timeUnit": "year",
+        "field": "Year",
+        "equal": "year_selection"
+      }
+    },
+    { "filter": "datum.Ranking <= 5" }
+  ],
+  "mark": "bar",
+  "encoding": {
+    "x": {
+      "field": "Number of arrivals",
+      "type": "quantitative",
+      "sort": { "field": "Number of arrival", "order": "descending" }
+    },
+    "y": {
+      "field": "Countries",
+      "type": "nominal"
+    },
+    "tooltip": [
+      { "field": "Countries", "type": "nominal" },
+      { "field": "Year", "type": "temporal", "timeUnit": "year" },
+      { "field": "Number of arrivals", "type": "quantitative" }
+    ]
+  },
+  "config": {
+    "title": {
       "font": "times new roman",
       "fontSize": 22
     },

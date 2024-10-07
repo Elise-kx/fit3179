@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "data": {
-    "url": "https://raw.githubusercontent.com/Elise-kx/fit3179/refs/heads/main/A2/data/number_arrivals.csv"
+    "url": "data/number_arrivals.csv"
   },
   "vconcat": [
     {
@@ -16,7 +16,7 @@
               "lookup": "State",
               "from": {
                 "data": {
-                  "url": "https://raw.githubusercontent.com/Elise-kx/fit3179/refs/heads/main/A2/data/output.json",
+                  "url": "data/output.json",
                   "format": { "type": "topojson", "feature": "states" }
                 },
                 "key": "properties.STATE_NAME"
@@ -55,7 +55,7 @@
         },
         {
           "data": {
-            "url": "https://raw.githubusercontent.com/Elise-kx/fit3179/refs/heads/main/A2/data/output.json",
+            "url": "data/output.json",
             "format": { "type": "topojson", "feature": "ne_110m_graticules_30" }
           },
           "mark": {
