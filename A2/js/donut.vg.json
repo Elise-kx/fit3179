@@ -31,7 +31,12 @@
   "mark": { "type": "arc", "innerRadius": 50 },
   "encoding": {
     "theta": { "field": "Number of Arrivals", "type": "quantitative" },
-    "color": { "field": "Reasons to travel", "type": "nominal" }
+    "color": { "field": "Reasons to travel", "type": "nominal" },
+    "tooltip": [
+      { "field": "Year", "type": "temporal", "timeUnit": "year" },
+      { "field": "Reasons to travel", "type": "nominal" },
+      { "field": "Number of Arrivals", "type": "quantitative" }
+    ]
   },
   "config": {
     "title": {
