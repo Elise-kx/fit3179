@@ -1,6 +1,5 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "description": "A simple donut chart with embedded data.",
   "data": {
     "url": "data/number_arrivals_reasons.csv"
   },
@@ -54,6 +53,11 @@
     },
     "legend": {
       "titleColor": "#593403"
+    },
+    "style": {
+    "cell": {
+      "stroke": "transparent"
     }
+  }
   }
 }

@@ -5,7 +5,10 @@
   },
   "vconcat": [
     {
-      "title": {"text" : "Number of Short-term Visitors Arrivals In Different States", "fontSize": 22},
+      "title": {
+        "text": "Number of Short-term Visitors Arrivals In Different States",
+        "fontSize": 22
+      },
       "width": 800,
       "height": 400,
       "projection": { "type": "equirectangular" },
@@ -33,7 +36,7 @@
             "color": {
               "field": "Number of Arrivals",
               "type": "quantitative",
-              "scale": { "type": "log" }
+              "scale": { "type": "log", "scheme": "tealblues" }
             },
             "tooltip": [
               {
@@ -59,7 +62,7 @@
           },
           "mark": {
             "type": "geoshape",
-            "stroke": "black",
+            "stroke": "beige",
             "strokeWidth": 1
           }
         }
@@ -68,12 +71,21 @@
     {
       "width": 800,
       "height": 200,
-      "mark": "point",
-      "title": {"text" : "Use this chart to filter out the data based on Year", "fontSize": 18},
+      "mark": { "type": "line", "point": true },
+      "title": {
+        "text": "*Use this chart to filter out the data based on Year (drag)*",
+        "fontSize": 14,
+        "fontStyle": "italic"
+      },
       "params": [
         {
           "name": "time_brush",
           "select": { "type": "interval", "encodings": ["x"] }
+        },
+        {
+          "name": "state",
+          "select": { "type": "point", "fields": ["State"] },
+          "bind": "legend"
         }
       ],
       "encoding": {
@@ -81,19 +93,28 @@
         "y": {
           "field": "Number of Arrivals",
           "type": "quantitative",
-          "title": "Total Number of Arrivals"
+          "title": "Total Number of Arrivals",
+          "axis": { "format": ".2s" }
         },
         "color": { "field": "State", "type": "nominal" },
         "tooltip": [
           { "field": "State", "type": "nominal" },
           { "field": "Year", "type": "temporal", "timeUnit": "year" },
-          { "field": "Number of Arrivals", "type": "quantitative" }
-        ]
+          {
+            "field": "Number of Arrivals",
+            "type": "quantitative",
+            "format": ","
+          }
+        ],
+        "opacity": {
+          "condition": { "param": "state", "value": 1 },
+          "value": 0.2
+        }
       }
     }
   ],
   "config": {
-    "title": { 
+    "title": {
       "font": "sans-serif",
       "color": "#593403"
     },

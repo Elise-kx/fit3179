@@ -47,7 +47,8 @@
         "x": {
           "field": "Number of arrivals",
           "type": "quantitative",
-          "aggregate": "max"
+          "aggregate": "max",
+          "axis": {"format": ".2s"}
         },
         "y": {
           "field": "Countries",
@@ -57,7 +58,7 @@
         "tooltip": [
           { "field": "Countries", "type": "nominal" },
           { "field": "Year", "type": "temporal", "timeUnit": "year" },
-          { "field": "Number of arrivals", "type": "quantitative" }
+          { "field": "Number of arrivals", "type": "quantitative", "format": ".2s" }
         ]
       }
     },
@@ -66,7 +67,10 @@
         "type": "text",
         "align": "left",
         "xOffset": -4,
-        "aria": false
+        "aria": false,
+        "dx": 8,
+        "fontSize": 11.5,
+        "fontStyle": "italic"
       },
       "encoding": {
         "x": {
@@ -76,9 +80,9 @@
         "y": {
           "field": "Countries",
           "type": "nominal",
-          "sort": { "field": "Number of arrivals", "order": "descending" }
+          "sort": { "field": "Number of arrivals", "order": "descending" } 
         },
-        "text": { "field": "Number of arrivals", "type": "quantitative" }
+        "text": { "field": "Number of arrivals", "type": "quantitative", "format": ".2s" }
       }
     }
   ],

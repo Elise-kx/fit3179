@@ -1,5 +1,5 @@
 body {
-  font-family: "Courier New", Courier, monospace;
+  font-family:"sans-serif";
   background-image: url("../img/background.jpeg");
   background-color: rgba(115, 111, 111, 0.6);
   background-blend-mode: darken;
@@ -34,7 +34,8 @@ img {
   display: flex;
   flex-direction: row;
   font-size: 30px;
-  text-align: center;
+  align-items: center;
+  justify-content: center;
 }
 
 .flex-container2 {
@@ -47,4 +48,13 @@ img {
   word-wrap: break-word;
   width: 80%;
   padding: 70px 0;
+}
+
+footer {
+  background-color: #ffeedb;
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding-bottom: 2%;
 }
