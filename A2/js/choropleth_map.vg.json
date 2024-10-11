@@ -36,7 +36,7 @@
             "color": {
               "field": "Number of Arrivals",
               "type": "quantitative",
-              "scale": { "type": "log", "scheme": "tealblues" }
+              "scale": { "type": "log", "scheme": "oranges" }
             },
             "tooltip": [
               {
