@@ -8,8 +8,8 @@ vegaEmbed("#top5_countries", vg_2, {actions : false}).then(function(result) {
     var view = result.view;
 }).catch(console.error);
 
-var vg_3 = "js/dot.vg.json";
-vegaEmbed("#dot", vg_3, {actions : false}).then(function(result) {
+var vg_3 = "js/stack.vg.json";
+vegaEmbed("#stack", vg_3, {actions : false}).then(function(result) {
     var view = result.view;
 }).catch(console.error);
 

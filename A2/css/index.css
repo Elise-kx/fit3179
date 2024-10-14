@@ -41,7 +41,7 @@ img {
 .flex-container2 {
   display: flex;
   flex-direction: row;
-  text-align: center;
+  text-align: justify;
   padding-left: 2%;
   padding-right: 2%;
 }
@@ -49,7 +49,7 @@ img {
 .description {
   word-wrap: break-word;
   width: 80%;
-  padding: 70px 0;
+  padding-inline: 5%;
 }
 
 footer {

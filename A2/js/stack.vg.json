@@ -7,66 +7,50 @@
   "height": 300,
   "params": [
     {
-      "name": "year_selection",
-      "value": 2024,
-      "bind": {
-        "input": "range",
-        "min": 1992,
-        "max": 2024,
-        "step": 1,
-        "name": "Year: "
-      }
-    }
-  ],
-  "transform": [
-    {
-      "filter": {
-        "timeUnit": "year",
-        "field": "Year",
-        "equal": "year_selection"
-      }
+      "name": "reason",
+      "select": { "type": "point", "fields": ["Reasons to travel"] },
+      "bind": "legend"
     }
   ],
   "encoding": {
-    "x": {
+    "y": {
       "field": "Number of Arrivals",
       "type": "quantitative",
       "title": "Number of Arrivals"
     },
-    "y": {
+    "x": {
+      "field": "Year",
+      "timeUnit": "year",
+      "type": "ordinal"
+    },
+    "color": {
       "field": "Reasons to travel",
       "type": "nominal",
-      "title": "Reasons to travel",
-      "axis": {
-        "offset": 5,
-        "ticks": false,
-        "minExtent": 70,
-        "domain": false
-      }
+      "title": "Reasons to travel"
     },
     "tooltip": [
-      { "field": "Year", "type": "temporal", "timeUnit": "year", "title": "Year" },
-
+      {
+        "field": "Year",
+        "type": "temporal",
+        "timeUnit": "year",
+        "title": "Year"
+      },
       { "field": "Reasons to travel", "type": "nominal" },
       { "field": "Number of Arrivals", "type": "quantitative", "format": "," }
-    ]
+    ],
+    "opacity": {
+      "condition": { "param": "reason", "value": 1 },
+      "value": 0.2
+    }
   },
   "layer": [
     {
-      "mark": "line",
-      "encoding": {
-        "detail": {
-          "field": "Reasons to travel",
-          "type": "nominal"
-        }
-      }
-    },
-    {
       "mark": {
-        "type": "point",
-        "filled": true,
-        "size": 200
+        "type": "bar",
+        "cornerRadiusTopLeft": 3,
+        "cornerRadiusTopRight": 3
       },
+
       "encoding": {
         "color": { "field": "Reasons to travel" }
       }

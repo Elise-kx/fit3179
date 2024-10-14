@@ -1,9 +1,9 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 600,
+  "width": 650,
   "height": 300,
   "title": {
-    "text": "Tourism GDP Over Australia's Total GDP",
+    "text": "Tourism's Share of Australia's Gross Value",
     "fontSize": 22,
     "fontStyle": "italic"
   },  "data": {
