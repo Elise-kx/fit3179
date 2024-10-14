@@ -1,0 +1,61 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 550,
+  "height": 300,
+  "data": {
+    "url": "data/gross_value_industry.csv"
+  },
+  "mark": { "type": "line", "point": true },
+  "title": {
+    "text": "Tourism Gross Value Added by Industry",
+    "fontSize": 22,
+    "fontStyle": "italic"
+  },
+  "params": [
+    {
+      "name": "industry",
+      "select": { "type": "point", "fields": ["Industry"] },
+      "bind": "legend"
+    }
+  ],
+  "encoding": {
+    "x": { "field": "Year", "type": "nominal" },
+    "y": {
+      "field": "Gross Value Added",
+      "type": "quantitative",
+      "title": "Tourism Gross Value Added",
+      "axis": { "format": ".2s" }
+    },
+    "color": { "field": "Industry", "type": "nominal" },
+    "tooltip": [
+      { "field": "Industry", "type": "nominal" },
+      { "field": "Year", "type": "nominal" },
+      {
+        "field": "Gross Value Added",
+        "type": "quantitative",
+        "format": ","
+      }
+    ],
+    "opacity": {
+      "condition": { "param": "industry", "value": 1 },
+      "value": 0.2
+    }
+  },
+  "config": {
+    "title": {
+      "font": "sans-serif",
+      "color": "#593403"
+    },
+    "background": "#ffeedb",
+    "axis": {
+      "titleColor": "#593403",
+      "labelColor": "#593403",
+      "labelFont": "sans-serif",
+      "labelFontSize": 12,
+      "titleFontSize": 12
+    },
+    "legend": {
+      "titleColor": "#593403"
+    }
+  }
+}

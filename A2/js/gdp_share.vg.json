@@ -1,0 +1,83 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 600,
+  "height": 300,
+  "data": {
+    "url": "data/gross_value_share.csv"
+  },
+  "encoding": {
+    "x": {
+      "field": "Year",
+      "type": "nominal",
+      "axis": { "title": "Year" }
+    }
+  },
+  "layer": [
+    {
+      "mark": { "type": "bar", "color": "#85C5A6" },
+      "encoding": {
+        "y": {
+          "field": "Total tourism gross value added ($b)",
+          "title": "Total tourism gross value added ($billion)",
+          "aggregate": "max"
+        },
+        "tooltip": [
+          { "field": "Year", "type": "nominal" },
+          {
+            "field": "Total tourism gross value added ($b)",
+            "type": "quantitative",
+            "title": "Total tourism gross value added ($billion)"
+          }
+        ]
+      }
+    },
+    {
+      "mark": { "type": "point", "color": "#05115a", "filled":true },
+      "encoding": {
+        "y": {
+          "field": "Total gross value share (%)",
+          "title": "Total gross value share (%)",
+          "aggregate": "max"
+        },
+        "tooltip": [
+          { "field": "Year", "type": "nominal" },
+          {
+            "field": "Total gross value share (%)",
+            "type": "quantitative"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "stroke": "#85A9C5",
+        "type": "line"
+      },
+      "encoding": {
+        "y": {
+          "field": "Total gross value share (%)",
+          "title": "Total gross value share (%)",
+          "aggregate": "max"
+        }
+      }
+    }
+  ],
+  "resolve": { "scale": { "y": "independent", "x": "shared" } },
+  "config": {
+    "title": {
+      "font": "sans-serif",
+      "color": "#593403"
+    },
+    "background": "#ffeedb",
+    "axis": {
+      "titleColor": "#593403",
+      "labelColor": "#593403",
+      "labelFont": "sans-serif",
+      "labelFontSize": 12,
+      "titleFontSize": 12
+    },
+    "legend": {
+      "titleColor": "#593403"
+    }
+  }
+}

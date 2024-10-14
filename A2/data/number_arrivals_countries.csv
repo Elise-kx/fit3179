@@ -6,7 +6,6 @@ Year,Countries,Number of arrivals,Ranking
 1992,New Zealand,447540,5
 1992,Total Americas,323620,6
 1992,"UK, CIs & IOM",289910,7
-1992,Total South-East Asia,281790,8
 1992,United States of America,262850,9
 1992,Singapore,116810,10
 1992,Germany,89890,11
@@ -72,7 +71,6 @@ Year,Countries,Number of arrivals,Ranking
 1993,Total Oceania and Antarctica,596310,3
 1993,Total North-West Europe,573970,4
 1993,New Zealand,499270,5
-1993,Total South-East Asia,380330,6
 1993,Total Americas,345150,7
 1993,"UK, CIs & IOM",310280,8
 1993,United States of America,281270,9
@@ -139,7 +137,6 @@ Year,Countries,Number of arrivals,Ranking
 1994,Japan,721090,2
 1994,Total North-West Europe,645090,3
 1994,Total Oceania and Antarctica,586180,4
-1994,Total South-East Asia,487780,5
 1994,New Zealand,480350,6
 1994,Total Americas,361620,7
 1994,"UK, CIs & IOM",335310,8
@@ -207,7 +204,6 @@ Year,Countries,Number of arrivals,Ranking
 1995,Japan,782680,2
 1995,Total North-West Europe,670870,3
 1995,Total Oceania and Antarctica,647150,4
-1995,Total South-East Asia,565980,5
 1995,New Zealand,538380,6
 1995,Total Americas,381850,7
 1995,"UK, CIs & IOM",347890,8
@@ -276,7 +272,6 @@ Year,Countries,Number of arrivals,Ranking
 1996,Total Oceania and Antarctica,786680,3
 1996,Total North-West Europe,709690,4
 1996,New Zealand,671880,5
-1996,Total South-East Asia,648430,6
 1996,Total Americas,401270,7
 1996,"UK, CIs & IOM",367530,8
 1996,United States of America,316880,9
@@ -344,7 +339,6 @@ Year,Countries,Number of arrivals,Ranking
 1997,Total Oceania and Antarctica,802610,3
 1997,Total North-West Europe,773310,4
 1997,New Zealand,685650,5
-1997,Total South-East Asia,669150,6
 1997,Total Americas,420100,7
 1997,"UK, CIs & IOM",410630,8
 1997,United States of America,329580,9
@@ -412,7 +406,6 @@ Year,Countries,Number of arrivals,Ranking
 1998,Total Oceania and Antarctica,837020,3
 1998,Japan,751130,4
 1998,New Zealand,709410,5
-1998,Total South-East Asia,556180,6
 1998,Total Americas,473600,7
 1998,"UK, CIs & IOM",467550,8
 1998,United States of America,373910,9
@@ -480,7 +473,6 @@ Year,Countries,Number of arrivals,Ranking
 1999,Total Oceania and Antarctica,866630,3
 1999,New Zealand,728790,4
 1999,Japan,707480,5
-1999,Total South-East Asia,618050,6
 1999,"UK, CIs & IOM",528440,7
 1999,Total Americas,527610,8
 1999,United States of America,417040,9
@@ -548,7 +540,6 @@ Year,Countries,Number of arrivals,Ranking
 2000,Total Oceania and Antarctica,949570,3
 2000,New Zealand,817030,4
 2000,Japan,720980,5
-2000,Total South-East Asia,671490,6
 2000,Total Americas,620930,7
 2000,"UK, CIs & IOM",580440,8
 2000,United States of America,488120,9
@@ -615,7 +606,6 @@ Year,Countries,Number of arrivals,Ranking
 2001,Total North-West Europe,1073440,2
 2001,Total Oceania and Antarctica,939880,3
 2001,New Zealand,814880,4
-2001,Total South-East Asia,679040,5
 2001,Japan,673570,6
 2001,"UK, CIs & IOM",617200,7
 2001,Total Americas,577450,8
@@ -684,7 +674,6 @@ Year,Countries,Number of arrivals,Ranking
 2002,Total Oceania and Antarctica,904410,3
 2002,New Zealand,790080,4
 2002,Japan,715460,5
-2002,Total South-East Asia,673780,6
 2002,"UK, CIs & IOM",642650,7
 2002,Total Americas,556180,8
 2002,United States of America,434500,9
@@ -753,7 +742,6 @@ Year,Countries,Number of arrivals,Ranking
 2003,New Zealand,839090,4
 2003,"UK, CIs & IOM",672810,5
 2003,Japan,627740,6
-2003,Total South-East Asia,625300,7
 2003,Total Americas,537500,8
 2003,United States of America,422130,9
 2003,Singapore,253360,10
@@ -821,7 +809,6 @@ Year,Countries,Number of arrivals,Ranking
 2004,New Zealand,1029460,4
 2004,Japan,707090,5
 2004,"UK, CIs & IOM",679320,6
-2004,Total South-East Asia,626270,7
 2004,Total Americas,561280,8
 2004,United States of America,431170,9
 2004,China,250210,10
@@ -889,7 +876,6 @@ Year,Countries,Number of arrivals,Ranking
 2005,New Zealand,1088020,4
 2005,"UK, CIs & IOM",714810,5
 2005,Japan,679970,6
-2005,Total South-East Asia,626410,7
 2005,Total Americas,584930,8
 2005,United States of America,442650,9
 2005,China,282730,10
@@ -958,7 +944,6 @@ Year,Countries,Number of arrivals,Ranking
 2006,"UK, CIs & IOM",744670,5
 2006,Japan,645910,6
 2006,Total Americas,613500,7
-2006,Total South-East Asia,595920,8
 2006,United States of America,452250,9
 2006,China,305570,10
 2006,"Korea, South",266490,11
@@ -1025,7 +1010,6 @@ Year,Countries,Number of arrivals,Ranking
 2007,New Zealand,1128940,4
 2007,"UK, CIs & IOM",705730,5
 2007,Total Americas,637680,6
-2007,Total South-East Asia,635530,7
 2007,Japan,569710,8
 2007,United States of America,458610,9
 2007,China,354610,10
@@ -1092,7 +1076,6 @@ Year,Countries,Number of arrivals,Ranking
 2008,Total North-East Asia,1246250,3
 2008,New Zealand,1104680,4
 2008,"UK, CIs & IOM",696220,5
-2008,Total South-East Asia,665170,6
 2008,Total Americas,665060,7
 2008,United States of America,462820,8
 2008,Japan,455560,9
@@ -1159,7 +1142,6 @@ Year,Countries,Number of arrivals,Ranking
 2009,Total North-West Europe,1246290,2
 2009,Total North-East Asia,1150130,3
 2009,New Zealand,1099910,4
-2009,Total South-East Asia,736660,5
 2009,Total Americas,686590,6
 2009,"UK, CIs & IOM",684590,7
 2009,United States of America,484340,8
@@ -1227,7 +1209,6 @@ Year,Countries,Number of arrivals,Ranking
 2010,Total North-East Asia,1309640,2
 2010,Total North-West Europe,1233220,3
 2010,New Zealand,1150210,4
-2010,Total South-East Asia,803100,5
 2010,Total Americas,684710,6
 2010,"UK, CIs & IOM",673430,7
 2010,United States of America,479280,8
@@ -1295,7 +1276,6 @@ Year,Countries,Number of arrivals,Ranking
 2011,Total North-East Asia,1322850,2
 2011,Total North-West Europe,1187410,3
 2011,New Zealand,1166830,4
-2011,Total South-East Asia,825220,5
 2011,Total Americas,674920,6
 2011,"UK, CIs & IOM",637360,7
 2011,China,540540,8
@@ -1363,7 +1343,6 @@ Year,Countries,Number of arrivals,Ranking
 2012,Total Oceania and Antarctica,1360010,2
 2012,New Zealand,1193120,3
 2012,Total North-West Europe,1187420,4
-2012,Total South-East Asia,879670,5
 2012,Total Americas,724990,6
 2012,China,628100,7
 2012,"UK, CIs & IOM",625980,8
@@ -1431,7 +1410,6 @@ Year,Countries,Number of arrivals,Ranking
 2013,Total Oceania and Antarctica,1366980,2
 2013,Total North-West Europe,1247860,3
 2013,New Zealand,1201250,4
-2013,Total South-East Asia,975940,5
 2013,Total Americas,750760,6
 2013,China,720760,7
 2013,"UK, CIs & IOM",668230,8
@@ -1499,7 +1477,6 @@ Year,Countries,Number of arrivals,Ranking
 2014,Total Oceania and Antarctica,1417370,2
 2014,Total North-West Europe,1269240,3
 2014,New Zealand,1244800,4
-2014,Total South-East Asia,1072740,5
 2014,China,851030,6
 2014,Total Americas,806970,7
 2014,"UK, CIs & IOM",657190,8
@@ -1567,7 +1544,6 @@ Year,Countries,Number of arrivals,Ranking
 2015,Total Oceania and Antarctica,1489000,2
 2015,New Zealand,1311950,3
 2015,Total North-West Europe,1299860,4
-2015,Total South-East Asia,1140110,5
 2015,China,1031900,6
 2015,Total Americas,870110,7
 2015,"UK, CIs & IOM",688190,8
@@ -1635,7 +1611,6 @@ Year,Countries,Number of arrivals,Ranking
 2016,Total Oceania and Antarctica,1529100,2
 2016,Total North-West Europe,1358060,3
 2016,New Zealand,1345190,4
-2016,Total South-East Asia,1303850,5
 2016,China,1208240,6
 2016,Total Americas,995470,7
 2016,United States of America,716530,8
@@ -1702,7 +1677,6 @@ Year,Countries,Number of arrivals,Ranking
 2017,Total North-East Asia,2567440,1
 2017,Total Oceania and Antarctica,1549900,2
 2017,Total North-West Europe,1397830,3
-2017,Total South-East Asia,1371980,4
 2017,New Zealand,1359510,5
 2017,China,1356910,6
 2017,Total Americas,1096740,7
@@ -1769,7 +1743,6 @@ Year,Countries,Number of arrivals,Ranking
 2017,Other North-West Europe,3670,68
 2018,Total North-East Asia,2716750,1
 2018,Total Oceania and Antarctica,1590090,2
-2018,Total South-East Asia,1445570,3
 2018,China,1432140,4
 2018,Total North-West Europe,1426600,5
 2018,New Zealand,1385000,6
@@ -1837,7 +1810,6 @@ Year,Countries,Number of arrivals,Ranking
 2018,Other North-West Europe,4020,68
 2019,Total North-East Asia,2743500,1
 2019,Total Oceania and Antarctica,1644610,2
-2019,Total South-East Asia,1509970,3
 2019,China,1438670,4
 2019,New Zealand,1433770,5
 2019,Total North-West Europe,1413110,6
@@ -1908,7 +1880,6 @@ Year,Countries,Number of arrivals,Ranking
 2020,Total Oceania and Antarctica,285970,3
 2020,Total Americas,282480,4
 2020,New Zealand,242440,5
-2020,Total South-East Asia,215510,6
 2020,China,207690,7
 2020,"UK, CIs & IOM",200800,8
 2020,United States of America,188680,9
@@ -1974,7 +1945,6 @@ Year,Countries,Number of arrivals,Ranking
 2021,Total Oceania and Antarctica,110410,1
 2021,New Zealand,96760,2
 2021,Total North-West Europe,35970,3
-2021,Total South-East Asia,28840,4
 2021,Total Americas,21900,5
 2021,"UK, CIs & IOM",21890,6
 2021,Total Southern and Central Asia,19290,7
@@ -2042,7 +2012,6 @@ Year,Countries,Number of arrivals,Ranking
 2022,Total Oceania and Antarctica,804820,1
 2022,Total North-West Europe,716020,2
 2022,New Zealand,697630,3
-2022,Total South-East Asia,696280,4
 2022,Total Americas,504100,5
 2022,Total Southern and Central Asia,407580,6
 2022,"UK, CIs & IOM",399190,7
@@ -2110,7 +2079,6 @@ Year,Countries,Number of arrivals,Ranking
 2023,Total Oceania and Antarctica,1473220,1
 2023,Total North-East Asia,1445440,2
 2023,New Zealand,1272140,3
-2023,Total South-East Asia,1199160,4
 2023,Total North-West Europe,1156650,5
 2023,Total Americas,984820,6
 2023,United States of America,659740,7
@@ -2178,7 +2146,6 @@ Year,Countries,Number of arrivals,Ranking
 2024,Total North-East Asia,1204350,1
 2024,Total Oceania and Antarctica,884480,2
 2024,New Zealand,773680,3
-2024,Total South-East Asia,760740,4
 2024,Total North-West Europe,665170,5
 2024,Total Americas,602480,6
 2024,China,551840,7

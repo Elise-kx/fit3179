@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "data": {
-    "url": "../data/number_arrivals_reasons.csv"
+    "url": "data/number_arrivals_reasons.csv"
   },
   "width": 500,
   "height": 300,
@@ -83,8 +83,8 @@
       "titleColor": "#593403",
       "labelColor": "#593403",
       "labelFont": "sans-serif",
-      "labelFontSize": 15,
-      "titleFontSize": 15
+      "labelFontSize": 12,
+      "titleFontSize": 12
     },
     "legend": {
       "titleColor": "#593403"

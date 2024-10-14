@@ -13,7 +13,12 @@ vegaEmbed("#dot", vg_3, {actions : false}).then(function(result) {
     var view = result.view;
 }).catch(console.error);
 
-var vg_4 = "js/gdp.vg.json";
-vegaEmbed("#gdp", vg_4, {actions : false}).then(function(result) {
+var vg_4 = "js/gdp_share.vg.json";
+vegaEmbed("#gdp_share", vg_4, {actions : false}).then(function(result) {
+    var view = result.view;
+}).catch(console.error);
+
+var vg_5 = "js/gdp_industry.vg.json";
+vegaEmbed("#gdp_industry", vg_5, {actions : false}).then(function(result) {
     var view = result.view;
 }).catch(console.error);
