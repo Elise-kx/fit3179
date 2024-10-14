@@ -42,6 +42,8 @@ img {
   display: flex;
   flex-direction: row;
   text-align: center;
+  padding-left: 2%;
+  padding-right: 2%;
 }
 
 .description {
