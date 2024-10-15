@@ -48,19 +48,20 @@
             background-color: gray;
           "
         />
-        <div style="text-align: center; width: 50%">
-          This visualization explores the trends in visits to
-          <mark style="background-color: #ffeedb; color: #d76615"
-            >Australia</mark
-          >.
-          <br />
-          Follow the journey to discover how
-          <mark style="background-color: #ffeedb; color: #d76615"
-            >Tourism impacts the economy in Australia, trends of tourism, and
-            the information</mark
-          >
-          grouped by different categories of visitors around the world.
-        </div>
+
+        This visualization explores the trends in visits to
+        <mark style="background-color: #ffeedb; color: #d76615">Australia</mark
+        >.
+        <br />
+        Follow the journey to discover how
+        <mark style="background-color: #ffeedb; color: #d76615"
+          >Tourism impacts the economy in Australia, trends of tourism, and the
+          information</mark
+        >
+        grouped by different categories of visitors around the world.
+        <br />
+        All data has been retrieved based on short-term visitors as they are
+        more likely to be tourists.
       </h3>
       <br />
 
@@ -85,17 +86,32 @@
               Value added by tourism to the economy, in $billions.
               <br />
               <br />
-              <i>Hover over the points or bars for more information.</i>
+              <i>**Hover over the points or bars for more information.</i>
             </p>
           </div>
           <div style="padding-right: -2%" id="gdp_share"></div>
         </div>
 
         <div class="flex-container2">
-          <div id="gdp_industry"></div>
           <div style="width: 30%">
-            <p class="description">[Description here]</p>
+            <p class="description">
+              A line graph to show gross value added, that is further borken
+              down to view the contirbution to several industries in Australia.
+              Showing a trend on which industry has the most positive inpact due
+              to
+              <mark style="background-color: #ffeedb; color: #85c5a6"
+                ><strong>TOURISM</strong></mark
+              >.
+              <br />
+              <br />
+              <i
+                >**Hover over the points or bars for more information.
+                <br />
+                **Click on the legend to highlight a specific industry.
+              </i>
+            </p>
           </div>
+          <div id="gdp_industry"></div>
         </div>
       </div>
       <br />
@@ -104,7 +120,24 @@
         <h2 style="color: hsla(0, 92%, 36%, 0.729)">
           INTERACTIVE AUSTRALIAN MAP
         </h2>
-        <p class="description">[Description Here]</p>
+        <p class="description">
+          Map and line graph to show the short term visitors (more likely to be
+          tourists) to australia for each different State. Map to show
+          distribution in a specific year, where line graphs shows data for all
+          years. The state with the most number of visitor will have a
+          <mark style="background-color: #ffeedb; color: #a25700"
+            ><strong>darker</strong></mark
+          >
+          colour.
+          <br />
+          Most of the states shows an increasing pattern in number of short term
+          visitors, until a drastic drop when approaching the year 2021, which
+          is believed to be due to COVID-19 that has affected tourism around the
+          world.
+          <br />
+          <br />
+          <i>**Use line graph to filter map by year. (drag)</i>
+        </p>
         <div id="map"></div>
       </div>
       <br />
@@ -114,10 +147,23 @@
           TOP 5 VISITING COUNTRIES EACH YEAR
         </h2>
         <div class="flex-container2">
-          <div style="width: 30%">
-            <p class="description">[Description here]</p>
-          </div>
           <div id="top5_countries"></div>
+          <div style="width: 30%">
+            <p class="description">
+              The chart filters the TOP 5 countries that most of the visitors
+              comes from, and showing the number of arrivals from all these 5
+              different countries. They are ordered form highest to lowest
+              number of total visitors in the <i>filtered</i> year.
+              <br />
+              <br />
+              <i
+                >**Hover over the points or bars for more information.
+                <br />
+                **Drag the year filter below the graph to look at the result in
+                a different year.
+              </i>
+            </p>
+          </div>
         </div>
       </div>
       <br />
@@ -127,7 +173,19 @@
         <div class="flex-container2">
           <div style="margin-right: 2%" id="stack"></div>
           <div style="width: 30%">
-            <p class="description">[Description here]</p>
+            <p class="description">
+              Visitor's Main Reasons to visit Australia In Recent Years. To
+              investigate the reason of why people around the world would like
+              to visit Australia. These reasons can be a factor to be considered
+              to increase the gross value added to the nation.
+              <br />
+              <br />
+              <i
+                >**Hover over the points or bars for more information.
+                <br />
+                **Click on the legend to highlight a specific industry.
+              </i>
+            </p>
           </div>
         </div>
       </div>

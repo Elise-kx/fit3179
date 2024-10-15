@@ -117,7 +117,8 @@
   "config": {
     "title": {
       "font": "sans-serif",
-      "color": "#593403"
+      "color": "#593403",
+      "fontStyle": "italic"
     },
     "background": "#ffeedb",
     "axis": {

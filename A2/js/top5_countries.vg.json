@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Number of arrivals from different Countries - TOP 5",
+  "title": "Number of Arrivals From Different Countries - TOP 5",
   "data": {
     "url": "data/number_arrivals_countries.csv"
   },
@@ -58,7 +58,7 @@
         },
         "tooltip": [
           { "field": "Countries", "type": "nominal" },
-          { "field": "Year", "type": "temporal", "timeUnit": "year" },
+          { "field": "Year", "type": "temporal", "timeUnit": "year", "title": "Year" },
           { "field": "Number of arrivals", "type": "quantitative", "format": ".2s" }
         ]
       }
@@ -91,7 +91,8 @@
     "title": {
       "font": "sans-serif",
       "fontSize": 22,
-      "color": "#593403"
+      "color": "#593403",
+      "fontStyle": "italic"
     },
     "background": "#ffeedb",
     "axis": {
